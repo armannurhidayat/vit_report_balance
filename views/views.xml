@@ -28,9 +28,14 @@
       <field name="arch" type="xml">
         <form string="Report Balance Form">
           <sheet>
+            <div class="oe_title">
+              <label for="name">Name</label>
+              <h1>
+                <field name="name"/>
+              </h1>
+            </div>
 
             <group>
-              <field name="name"/>
               <field name="date_start"/>
               <field name="date_end"/>
               <field name="company_id"/>
@@ -40,7 +45,6 @@
               <page string="Report Balance SO">
                 <field name="report_ids"> 
                   <tree string="Sessions" editable="bottom">
-                    <field name="report_id"/>
                     <field name="product_id" />
                     <field name="product_code" />
                     <field name="total_so_bln_lalu" />

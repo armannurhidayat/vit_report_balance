@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
+import time
 
 class reportBalance(models.Model):
     _name = 'report.balance'
@@ -10,12 +11,14 @@ class reportBalance(models.Model):
         required=True,
     )
 
-    date_start = fields.Datetime(
+    date_start = fields.Date(
         string='Date Start',
+        default=lambda self:time.strftime("%Y-%m-%d")
     )
 
-    date_end = fields.Datetime(
+    date_end = fields.Date(
         string='Date End',
+        default=lambda self:time.strftime("%Y-%m-%d")
     )
     company_id = fields.Many2one(
         'res.company',
