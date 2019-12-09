@@ -1,0 +1,30 @@
+<odoo>
+	<data>
+		
+		<record id="action_report_balance_list" model="ir.actions.act_window">
+            <field name="name">Report Balance</field>
+            <field name="res_model">report.balance</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create"> Click to create a Report Balance </p>
+                <p>klik tombol create untuk bikin Report Balance baru</p>
+            </field>
+        </record>
+
+		<menuitem id="report_balance_0"
+        name="Report Balance"
+        sequence="20"/>
+
+        <menuitem id="report_balance_1"
+        name="Report Balance"
+        parent="report_balance_0"
+        sequence="20"/>
+
+        <menuitem id="menu_report_balance"
+        name="Dashboard"
+        parent="report_balance_0"
+        action="action_report_balance_list"
+        sequence="20"/>
+
+	</data>
+</odoo>
