@@ -13,15 +13,18 @@ class reportBalance(models.Model):
 
     date_start = fields.Date(
         string='Date Start',
+        required=True,
         default=lambda self:time.strftime("%Y-%m-%d")
     )
 
     date_end = fields.Date(
         string='Date End',
+        required=True,
         default=lambda self:time.strftime("%Y-%m-%d")
     )
     company_id = fields.Many2one(
         'res.company',
+        required=True,
         string='Company',
     )
     report_ids = fields.One2many(
@@ -45,7 +48,7 @@ class reportBalanceSo(models.Model):
     )
     product_code = fields.Char(
     	string='Product Code',
-    	# related='product_id.default_code',
+    	related='product_id.default_code',
     )
     total_so_bln_lalu = fields.Float(
         string='Total SO Bulan Lalu',
