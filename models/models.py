@@ -45,7 +45,7 @@ class reportBalanceSo(models.Model):
     )
     product_code = fields.Char(
     	string='Product Code',
-    	related='product_id.default_code'
+    	# related='product_id.default_code',
     )
     total_so_bln_lalu = fields.Float(
         string='Total SO Bulan Lalu',
