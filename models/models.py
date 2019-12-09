@@ -73,3 +73,6 @@ class reportBalanceSo(models.Model):
     wip_onhand = fields.Float(
         string='Wip Onhand',
     )
+    balance_so = fields.Float(
+        string='Balance SO',
+    )
